@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <script src="../../node_modules/resemblejs/resemble.js"></script>
+  <script>
+  var diffImageData;
+
+  function compare(oldImage, newImage) {
+    resemble(oldImage).
+      compareTo(newImage).
+      ignoreAntialiasing().
+      onComplete(function (data) {
+        var result = document.createElement('div');
+
+        result.id = 'result';
+        result.innerHTML = data.misMatchPercentage;
+
+        diffImageData = data.getImageDataUrl().replace(/data:image\/png;base64,/,'');
+
+        document.body.appendChild(result);
+      });
+  }
+  </script>
+</head>
+<body>
+</body>
+</html>
