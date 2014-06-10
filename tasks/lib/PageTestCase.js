@@ -40,7 +40,6 @@ PageTestCase.prototype.addBatchTo = function (suite, deferred) {
 
       that.browser.
         get(that.page.url).
-        waitFor(asserters.jsCondition('loaded === true')).
         saveScreenshot(resultImageFileName).
         get('http://localhost:3000' + path.resolve(__dirname, 'image-comparison.html')).
         execute('compare("' + path.resolve(previousImage) + '","' + path.resolve(resultImage) + '")').
