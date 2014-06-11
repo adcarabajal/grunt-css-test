@@ -42,13 +42,13 @@ grunt.initConfig({
 
 #### options.screenshotsPath
 Type: `String`
-Default value: 'tests/screenshots/target'
+Default value: `tests/screenshots/target`
 
 Path that is used to save testing pages screenshots. These screenshots are used later as expected images.
 
 #### options.resultsPath
 Type: `String`
-Default value: 'tests/results/target'
+Default value: `tests/results/target`
 
 Path that is used to save current pages screenshots and diff images from previously saved images.
 
@@ -69,7 +69,7 @@ Debug information is displayed on console if enabled. This includes webdriver co
 
 ### options.environment.remote
 type: `Object`
-Default value: 'http://localhost:9515'
+Default value: `http://localhost:9515`
 
 WebDriver remote connection information. 
 For example if you want to use sauce onDemand:
@@ -87,15 +87,15 @@ type: `Object`
 An object that describes the capabilities to instantiate a new webdriver.
 [more info](https://code.google.com/p/selenium/wiki/DesiredCapabilities).
 
-There is an important property if you decide to choose sauceLabs, the 'tunnel-identifier', this will be the map between sauce connect and your test.
+There is an important property if you decide to choose sauceLabs, the `tunnel-identifier`, this will be the map between sauce connect and your test.
 
 ### Usage Examples
 
 #### Default Options
 In this example, there is just one page to test.
 
-The webdriver will try to connect remote: 'http://localhost:9515', using chrome.
-Images will be stored on 'tests/screenshots/local'.      
+The webdriver will try to connect remote: `http://localhost:9515`, using chrome.
+Images will be stored on `tests/screenshots/local`.      
 
 ```js
 grunt.initConfig({
