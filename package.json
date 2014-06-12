@@ -1,7 +1,7 @@
 {
   "name": "grunt-css-test",
   "description": "CSS testing through browsers screenshots comparation",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/adcarabajal/grunt-css-test",
   "author": {
     "name": "adcarabajal",
